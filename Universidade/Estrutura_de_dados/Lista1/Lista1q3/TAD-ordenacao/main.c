@@ -2,50 +2,11 @@
 #include <stdlib.h>
 #include <math.h>
 #include <time.h>
+#include "tadord.c"
 
 
 
 
-int Bubblesort(int *vet[]){
-
-
-    
-    int n = 20;
-    int i,j;
-    
-   
-    
-   	 for( i= 0 ; i<n ; i++){
-   		 for( j= n-1 ; j>i ; j--){
-   			 if(vet[j]<vet[j-1]){
-   				 int *temp;
-   				 
-   				 temp = vet[j];
-   				 vet[j] = vet[j-1];
-   				 vet[j-1] = temp;
-   				 
-   			 
-   				 
-   				 
-   			 }
-   			 
-   			 
-   		 }
-   	 }
-    
-   	 printf("\n");
-   	 for( i= 0 ; i<100 ; i++){
-   		 printf("[%d]", vet[i]);
-   		 }    
-   		 
-    
-    
-    
-    
-    
-    
-    return 0;
-}
 
 
 
@@ -73,12 +34,18 @@ int main(void){
     for( i= 0 ; i<n ; i++){
    	 vet[i] = rand()%100;
    	 printf("[%d] ", vet[i]);
-   	 
-   	 
-    
+	 
     }
     
-    
-     vetord = Bubblesort(*vet);
+	printf("Vetor Original\n");
 
+	
+     vetord = Bubblesort(vet);
+	 printf("Bubblesort \n");
+	
+	 vetord = Selectionsort(vet);
+	 printf("Selectionsort\n");
+	
+	 vetord = Inserctionsort(vet);
+	printf("Inserctionsort\n");
 }
