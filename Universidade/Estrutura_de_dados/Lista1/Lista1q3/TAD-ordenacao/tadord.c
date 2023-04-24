@@ -3,7 +3,7 @@
 #include <stdlib.h>
 
 
-const  int n = 20;
+const  int n = 50000;
 
 
 int Bubblesort(int *vet){
@@ -66,7 +66,7 @@ int min = 0, i,j;
     
    	 printf("\n");
     
-    for (i =0;i<20; i++){
+    for (i =0;i<n; i++){
    	 printf("[%d] ", vet[i]);
     }
     
