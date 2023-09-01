@@ -1,6 +1,6 @@
 #include "pilhadinamica.h"
 #include <stdlib.h>
-
+#include <stdio.h>
 Pilha* criarPilha() {
     Pilha* pilha = (Pilha*)malloc(sizeof(Pilha));
     pilha->topo = NULL;
