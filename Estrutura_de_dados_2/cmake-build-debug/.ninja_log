@@ -1,0 +1,5 @@
+# ninja log v5
+105	221	1693618932491663771	Estrutura_de_dados_2	9be05309704d6a22
+1	104	1693618932374743005	CMakeFiles/Estrutura_de_dados_2.dir/Lista_1/MergeSort.c.o	69fa153d7602f05f
+1	341	1693619014595195369	build.ninja	63da271f2f86de0b
+0	123	1693619025914207486	CMakeFiles/Estrutura_de_dados_2.dir/Lista_1/Q1/MergeSort.c.o	5a09c3ee7d316b5b
