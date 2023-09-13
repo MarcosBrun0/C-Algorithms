@@ -65,7 +65,7 @@ int main(void){
     scanf("%d", &n);
 
 
-    vet = malloc(n);
+    vet = (int)malloc(sizeof(int) * n);
     srand(time(NULL));
 
     for( i = 0; i<n;i++){

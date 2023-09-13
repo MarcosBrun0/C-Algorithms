@@ -103,7 +103,7 @@ int main(){
     int i;
     srand(time(NULL));
 
-    vet = (int *)malloc(n*sizeof(int));
+    vet = (int)malloc(sizeof(int) * n);
 
 
     if(vet == NULL){

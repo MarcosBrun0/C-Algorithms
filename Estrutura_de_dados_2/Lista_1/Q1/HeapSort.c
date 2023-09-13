@@ -33,7 +33,7 @@ void reheapDown ( int* heap, int root , int last)
     if((root*2+1)<=last)
     {
         leftkey = heap[root*2+1];
-        if ((root *2+1)<= last)
+        if ((root *2+2)<= last)
             rightkey = heap[root *2+2];
         else
             rightkey = -1;
@@ -76,6 +76,7 @@ void HeapSort(int list[ ], int last){
     sorted = last;
     while(sorted>0){
         holdData = list[0];
+        list[0] = list[sorted];
         list[sorted ]= holdData;
         sorted--;
         reheapDown (list, 0 ,sorted);
@@ -98,7 +99,7 @@ int main(void){
     scanf("%d", &n);
 
 
-    vet = malloc(n);
+     vet = (int)malloc(sizeof(int) * n);
     srand(time(NULL));
 
     for( i = 0; i<n;i++){
