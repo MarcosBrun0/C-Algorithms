@@ -99,7 +99,7 @@ int main(void){
     scanf("%d", &n);
 
 
-     vet = (int)malloc(sizeof(int) * n);
+    vet = (int*)malloc(sizeof(int) * n);
     srand(time(NULL));
 
     for( i = 0; i<n;i++){
@@ -107,7 +107,7 @@ int main(void){
         printf("[%d]" ,vet[i]);
     }
 
-    printf("\n_______________________________\n");
+    printf("\n HeapSort_______________________________\n\n");
     HeapSort(vet, n-1);
 
     for(i=0;i<n;i++){

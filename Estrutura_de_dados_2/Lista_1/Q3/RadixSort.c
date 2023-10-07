@@ -4,7 +4,7 @@
 
 
 
-void radixsort(int vetor[], int tamanho) {
+void RadixsortF(int vetor[], int tamanho) {
     int i;
     int *b;
     int maior = vetor[0];
@@ -34,29 +34,38 @@ void radixsort(int vetor[], int tamanho) {
     free(b);
 }
 
-int main (void){
-int i,n;
-int *vet;
 
-printf("Digite um valor para N: \n");
-scanf("%d", &n);
-srand(time(NULL));
+int main(void) {
+    int i, n;
+    int *vet;
 
-vet = (int)malloc(sizeof(int)*n);
+    printf("Digite um valor para N: \n");
+    scanf("%d", &n);
+    srand(time(NULL));
 
-for(i=0;i<n;i++){
+    vet = (int *)malloc(sizeof(int) * n);
 
-vet[i] = rand()%100;
- printf("[%d]", vet[i]);
+    if (vet == NULL) {
+        printf("Memory allocation failed. Exiting...");
+        exit(1);
+    }
 
+    for (i = 0; i < n; i++) {
+        vet[i] = rand() % 100;
+        printf("[%d] ", vet[i]);
+    }
 
+    printf("\n----------------------------------\n");
+
+    RadixsortF(vet, n);
+
+    for (i = 0; i < n; i++) {
+        printf("[%d] ", vet[i]);
+    }
+
+    // Free the allocated memory
+    free(vet);
+
+    return 0;
 }
-printf("\n----------------------------------\n");
-radixsort(vet,n);
-for(i=0;i<n;i++){
 
- printf("[%d]", vet[i]);
-}
-
- return 0;
-}

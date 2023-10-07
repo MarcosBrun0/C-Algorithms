@@ -65,7 +65,7 @@ int main(void){
     scanf("%d", &n);
 
 
-    vet = (int)malloc(sizeof(int) * n);
+    vet = (int*)malloc(sizeof(int) * n);
     srand(time(NULL));
 
     for( i = 0; i<n;i++){
@@ -73,7 +73,7 @@ int main(void){
         printf("[%d]" ,vet[i]);
     }
 
-    printf("\n_______________________________\n");
+    printf("\n MergeSort_______________________________\n");
     mergeSort(vet,0,n-1);
 
     for(i=0;i<n;i++){

@@ -6,21 +6,41 @@
 #include <stdlib.h>
 #include <time.h>
 
+
+void quickInsertion (int data[], int first, int last){
+
+    int hold;
+    int walker;
+    for (int current = first + 1;
+         current <= last;
+         current++){
+
+        hold = data[current];
+        walker = current - 1;
+        while (walker >= first && hold < data[walker]){
+            data[walker + 1] = data[walker];
+            walker = walker - 1;
+        }
+        data[walker + 1] = hold;
+    }
+}
+
+
 void medianLeft (int sortData[], int left, int right){
 
     int mid;
     int hold;
 
-    mid = (left = right) / 2;
+    mid = (left + right) / 2;
     if (sortData[left] > sortData[mid]){
         hold = sortData[left];
         sortData[left] = sortData[mid];
         sortData[mid] = hold;
     }
-    if (sortData[left] > sortData[mid]){
+    if (sortData[left] > sortData[right]){
 
         hold = sortData[left];
-        sortData[left] = sortData[right];
+        sortData[left] = sortData[mid];
         sortData[right] = hold;
     }
     if(sortData[mid] > sortData[right]){
@@ -30,9 +50,7 @@ void medianLeft (int sortData[], int left, int right){
     }
     hold = sortData[left];
     sortData[left] = sortData[mid];
-    sortData = hold;
-
-    return;
+    sortData[mid] = hold;
 
 }
 
@@ -53,13 +71,14 @@ void quickSort (int SortData[], int left, int right ){
         while (sortLeft <= sortRight){
 
             while (SortData[sortLeft] < pivot)
-                sortLeft = sortLeft + 1;
+                {sortLeft = sortLeft + 1;}
             while (SortData[sortRight] >= pivot)
+                {sortRight = sortRight - 1;}
                 if (sortLeft <= sortRight){
 
                     hold = SortData[sortLeft];
                     SortData[sortLeft] = SortData[sortRight];
-                    SortData[sortRight] = SortData[sortRight];
+                    SortData[sortRight] = hold;
                     sortLeft = sortLeft + 1;
                     sortRight = sortRight - 1;
 
@@ -68,71 +87,39 @@ void quickSort (int SortData[], int left, int right ){
         SortData[left] = SortData[sortLeft - 1];
         SortData[sortLeft - 1] = pivot;
         if(left < sortRight)
-            quickSort(SortData, sortLeft, right);
+            quickSort(SortData, left, sortRight - 1);
         if(sortLeft < right)
             quickSort (SortData, sortLeft, right);
     }
     else
         quickInsertion(SortData, left, right);
-    return;
 
-}
-
-void quickInsertion (int data[], int first, int last){
-
-    int hold;
-    int walker;
-    for (int current = first + 1;
-         current <= last;
-         current++){
-
-        hold = data[current];
-        walker = current - 1;
-        while (walker >= first && hold < data[walker]){
-            data[walker + 1] = data[walker];
-            walker = walker - 1;
-        }
-        data[walker + 1] = hold;
-    }
-    return;
 }
 
 int main(){
-    int n,j;
+    int n, i;
     int *vet;
-    int i;
     srand(time(NULL));
 
-    vet = (int)malloc(sizeof(int) * n);
+    printf("Digite o valor de N: ");
+    scanf("%d",&n);
 
-
-    if(vet == NULL){
-        printf("ERRO");
-        exit(1);
-    }
-
-
-    printf("Digite o valor de N: \n");
-    scanf("%d",&j);
-    n = j;
+    vet = (int*)malloc(sizeof(int) * n);
 
     for(i=0;i<n; i++){
         vet[i] = rand()%100;
         printf("[%d] ", vet[i]);
-
     }
+    printf("\n ", vet[i]);
 
-    double time_spent =  0.0;
-
-    clock_t begin = clock();
     quickSort(vet,0, n-1);
 
-    clock_t end = clock();
-    time_spent += (double )(end - begin)/CLOCKS_PER_SEC;
+    for(i=0;i<30; i++){
 
-    printf("\n\n \n Tempo do codigo é %f", time_spent);
-    printf("\n \n \n \n ----------------------------------\n");
+        printf(" - ");
+    }
 
+    printf("\n ", vet[i]);
     for(i=0;i<n; i++){
 
         printf("[%d] ", vet[i]);
