@@ -1,71 +1,87 @@
-#include <stdlib.h>
 #include <stdio.h>
+#include <stdlib.h>
 #include <time.h>
-
-
-
-void RadixsortF(int vetor[], int tamanho) {
-    int i;
-    int *b;
-    int maior = vetor[0];
-    int exp = 1;
-
-    b = (int *)calloc(tamanho, sizeof(int));
-
-    for (i = 0; i < tamanho; i++) {
-        if (vetor[i] > maior)
-    	    maior = vetor[i];
+// Função para encontrar o maior elemento no vetor
+int findMax(int arr[], int n) {
+    int max = arr[0];
+    for (int i = 1; i < n; i++) {
+        if (arr[i] > max) {
+            max = arr[i];
+        }
     }
-
-    while (maior/exp > 0) {
-        int bucket[10] = { 0 };
-    	for (i = 0; i < tamanho; i++)
-    	    bucket[(vetor[i] / exp) % 10]++;
-    	for (i = 1; i < 10; i++)
-    	    bucket[i] += bucket[i - 1];
-    	for (i = tamanho - 1; i >= 0; i--)
-    	    b[--bucket[(vetor[i] / exp) % 10]] = vetor[i];
-    	for (i = 0; i < tamanho; i++)
-    	    vetor[i] = b[i];
-    	exp *= 10;
-    }
-
-
-    free(b);
+    return max;
 }
 
+// Função de ordenação Radix usando o Counting Sort
+void countingSort(int arr[], int n, int exp) {
+    int output[n]; // Vetor de saída
+    int count[10] = {0};
 
-int main(void) {
-    int i, n;
+    // Armazena a contagem de ocorrências em count[]
+    for (int i = 0; i < n; i++) {
+        count[(arr[i] / exp) % 10]++;
+    }
+
+    // Altera count[i] para que ele agora contenha a posição real deste dígito no output[]
+    for (int i = 1; i < 10; i++) {
+        count[i] += count[i - 1];
+    }
+
+    // Constrói o vetor de saída
+    for (int i = n - 1; i >= 0; i--) {
+        output[count[(arr[i] / exp) % 10] - 1] = arr[i];
+        count[(arr[i] / exp) % 10]--;
+    }
+
+    // Copia o vetor de saída para arr[] para que arr[] agora contenha números ordenados de acordo com o dígito atual
+    for (int i = 0; i < n; i++) {
+        arr[i] = output[i];
+    }
+}
+
+// Função principal para executar o Radix Sort
+void radixSort(int arr[], int n) {
+    // Encontra o número máximo para saber o número de dígitos
+    int max = findMax(arr, n);
+
+    // Faz a ordenação para cada dígito, começando pelo dígito menos significativo até o mais significativo
+    for (int exp = 1; max / exp > 0; exp *= 10) {
+        countingSort(arr, n, exp);
+    }
+}
+
+// Função para imprimir um vetor
+void printArray(int arr[], int n) {
+    for (int i = 0; i < n; i++) {
+        printf("%d ", arr[i]);
+    }
+    printf("\n");
+}
+
+int main() {
+    int n,i;
     int *vet;
 
-    printf("Digite um valor para N: \n");
+    printf("Digite o tamanho do vetor: ");
     scanf("%d", &n);
+
+    vet = (int *)malloc(n * sizeof(int));
     srand(time(NULL));
+    for(i=0;i<n;i++){
+        vet[i] = rand()%100;
 
-    vet = (int *)malloc(sizeof(int) * n);
-
-    if (vet == NULL) {
-        printf("Memory allocation failed. Exiting...");
-        exit(1);
     }
 
-    for (i = 0; i < n; i++) {
-        vet[i] = rand() % 100;
-        printf("[%d] ", vet[i]);
-    }
 
-    printf("\n----------------------------------\n");
+    printf("Vetor original: ");
+    printArray(vet, n);
 
-    RadixsortF(vet, n);
+    radixSort(vet, n);
 
-    for (i = 0; i < n; i++) {
-        printf("[%d] ", vet[i]);
-    }
+    printf("Vetor ordenado: ");
+    printArray(vet, n);
 
-    // Free the allocated memory
-    free(vet);
+    free(vet); // Libera a memória alocada para o vetor
 
     return 0;
 }
-

@@ -1,0 +1,3 @@
+/Users/marcosbrunop.campos/Documents/Codes/Computer Science UENF/Estrutura_de_dados_2/Lista_1/Q3/cmake-build-debug/CMakeFiles/Q3.dir
+/Users/marcosbrunop.campos/Documents/Codes/Computer Science UENF/Estrutura_de_dados_2/Lista_1/Q3/cmake-build-debug/CMakeFiles/edit_cache.dir
+/Users/marcosbrunop.campos/Documents/Codes/Computer Science UENF/Estrutura_de_dados_2/Lista_1/Q3/cmake-build-debug/CMakeFiles/rebuild_cache.dir
