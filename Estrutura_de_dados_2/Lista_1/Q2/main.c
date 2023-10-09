@@ -40,7 +40,7 @@ void trocar(Elemento *a, Elemento *b)
 void subir(FilaDePrioridade *fila, int indice)
 {
     int pai = (indice - 1) / 2;
-    while (indice > 0 && fila->array[indice].prioridade > fila->array[pai].prioridade)
+    while (indice > 0 && (fila->array[indice].prioridade * 10) + fila->array[indice].ordemChegada > (fila->array[pai].prioridade * 10) + fila->array[pai].ordemChegada)
     {
         trocar(&fila->array[indice], &fila->array[pai]);
         indice = pai;
@@ -74,12 +74,12 @@ void descer(FilaDePrioridade *fila, int indice)
     int filhoDir = 2 * indice + 2;
     int maior = indice;
 
-    if (filhoEsq < fila->tamanho && fila->array[filhoEsq].prioridade > fila->array[maior].prioridade)
+    if (filhoEsq < fila->tamanho && (fila->array[filhoEsq].prioridade * 10) + fila->array[filhoEsq].ordemChegada > (fila->array[maior].prioridade * 10) + fila->array[maior].ordemChegada)
     {
         maior = filhoEsq;
     }
 
-    if (filhoDir < fila->tamanho && fila->array[filhoDir].prioridade > fila->array[maior].prioridade)
+    if (filhoDir < fila->tamanho && (fila->array[filhoDir].prioridade * 10) + fila->array[filhoDir].ordemChegada > (fila->array[maior].prioridade * 10) + fila->array[maior].ordemChegada)
     {
         maior = filhoDir;
     }
@@ -128,6 +128,7 @@ int main()
     inserir(fila, 3, 2);
     inserir(fila, 8, 3);
     inserir(fila, 1, 4);
+    inserir(fila, 8, 4);
 
     // Remover e imprimir os elementos em ordem de prioridade
     while (fila->tamanho > 0)
