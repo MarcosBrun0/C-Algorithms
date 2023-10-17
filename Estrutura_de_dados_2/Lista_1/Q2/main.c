@@ -10,7 +10,7 @@ typedef struct
     // Outros campos de dados, se necessário
 } Elemento;
 
-// Estrutura para 5representar a fila de prioridade
+// Estrutura para representar a fila de prioridade
 typedef struct
 {
     Elemento *array; // Array de elementos
@@ -40,7 +40,7 @@ void trocar(Elemento *a, Elemento *b)
 void subir(FilaDePrioridade *fila, int indice)
 {
     int pai = (indice - 1) / 2;
-    while (indice > 0 && (fila->array[indice].prioridade * 10) + fila->array[indice].ordemChegada > (fila->array[pai].prioridade * 10) + fila->array[pai].ordemChegada)
+    while (indice > 0 && (fila->array[indice].prioridade * 10) + (abs(fila->array[indice].ordemChegada - 10)) > (fila->array[pai].prioridade * 10) + (abs(fila->array[pai].ordemChegada - 10)))
     {
         trocar(&fila->array[indice], &fila->array[pai]);
         indice = pai;
@@ -74,12 +74,12 @@ void descer(FilaDePrioridade *fila, int indice)
     int filhoDir = 2 * indice + 2;
     int maior = indice;
 
-    if (filhoEsq < fila->tamanho && (fila->array[filhoEsq].prioridade * 10) + fila->array[filhoEsq].ordemChegada > (fila->array[maior].prioridade * 10) + fila->array[maior].ordemChegada)
+    if (filhoEsq < fila->tamanho && (fila->array[filhoEsq].prioridade * 10) + (abs(fila->array[filhoEsq].ordemChegada - 10)) > (fila->array[maior].prioridade * 10) + (abs(fila->array[maior].ordemChegada - 10)))
     {
         maior = filhoEsq;
     }
 
-    if (filhoDir < fila->tamanho && (fila->array[filhoDir].prioridade * 10) + fila->array[filhoDir].ordemChegada > (fila->array[maior].prioridade * 10) + fila->array[maior].ordemChegada)
+    if (filhoDir < fila->tamanho && (fila->array[filhoDir].prioridade * 10) + (abs(fila->array[filhoDir].ordemChegada - 10)) > (fila->array[maior].prioridade * 10) + (abs(fila->array[maior].ordemChegada - 10)))
     {
         maior = filhoDir;
     }
@@ -126,9 +126,9 @@ int main()
     // Exemplo de inserção de elementos na fila de prioridade
     inserir(fila, 5, 1);
     inserir(fila, 3, 2);
-    inserir(fila, 8, 3);
+    inserir(fila, 4, 3);
     inserir(fila, 1, 4);
-    inserir(fila, 8, 4);
+    inserir(fila, 5, 5);
 
     // Remover e imprimir os elementos em ordem de prioridade
     while (fila->tamanho > 0)
