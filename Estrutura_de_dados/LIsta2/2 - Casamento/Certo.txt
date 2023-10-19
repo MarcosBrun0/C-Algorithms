@@ -1,0 +1,17 @@
+void* remove_Pilha(Pilha* p) {				
+	void* dataOutPtr;
+	Pilha_node* aux;
+	
+	if (p->contador == 0){
+		dataOutPtr = NULL;
+	}
+	
+	aux = p->top;
+	dataOutPtr = p->top->dataPtr;
+	p->top = p->top->link;
+	
+	free(aux);
+	(p->contador)--;
+	
+	return dataOutPtr;
+}
