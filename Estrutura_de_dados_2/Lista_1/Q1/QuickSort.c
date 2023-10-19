@@ -6,32 +6,12 @@
 #include <stdlib.h>
 #include <time.h>
 
-
-void quickInsertion (int data[], int first, int last){
-
-    int hold;
-    int walker;
-    for (int current = first + 1;
-         current <= last;
-         current++){
-
-        hold = data[current];
-        walker = current - 1;
-        while (walker >= first && hold < data[walker]){
-            data[walker + 1] = data[walker];
-            walker = walker - 1;
-        }
-        data[walker + 1] = hold;
-    }
-}
-
-
 void medianLeft (int sortData[], int left, int right){
 
     int mid;
     int hold;
 
-    mid = (left + right) / 2;
+    mid = (left = right) / 2;
     if (sortData[left] > sortData[mid]){
         hold = sortData[left];
         sortData[left] = sortData[mid];
@@ -51,6 +31,8 @@ void medianLeft (int sortData[], int left, int right){
     hold = sortData[left];
     sortData[left] = sortData[mid];
     sortData[mid] = hold;
+
+    return;
 
 }
 
@@ -93,13 +75,41 @@ void quickSort (int SortData[], int left, int right ){
     }
     else
         quickInsertion(SortData, left, right);
+    return;
 
+}
+
+void quickInsertion (int data[], int first, int last){
+
+    int hold;
+    int walker;
+    for (int current = first + 1;
+        current <= last;
+        current++){
+
+        hold = data[current];
+        walker = current - 1;
+        while (walker >= first && hold < data[walker]){
+            data[walker + 1] = data[walker];
+            walker = walker - 1;
+        }
+        data[walker + 1] = hold;
+    }
+    return;
 }
 
 int main(){
     int n, i;
     int *vet;
     srand(time(NULL));
+
+
+
+    if(vet == NULL){
+        printf("ERRO");
+        exit(1);
+    }
+
 
     printf("Digite o valor de N: ");
     scanf("%d",&n);
@@ -118,7 +128,7 @@ int main(){
 
         printf(" - ");
     }
-
+    printf("QUICKSORT");
     printf("\n ", vet[i]);
     for(i=0;i<n; i++){
 

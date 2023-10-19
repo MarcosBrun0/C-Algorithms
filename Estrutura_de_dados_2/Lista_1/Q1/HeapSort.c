@@ -63,18 +63,21 @@ void reheapDown ( int* heap, int root , int last)
 
 
 void HeapSort(int list[ ], int last){
+//recebe o vetor e o tamanho
 
     int sorted;
     int holdData;
 
 
-    //creat heap
+    //creat heap, coloca elementos no heao
     for (int walker = 1;walker <= last; walker++)
         reheapUP ( list, walker);
 
     //sort it
-    sorted = last;
+    sorted = last; //sorted recebe tamanho
     while(sorted>0){
+        //coloca a raiz por ultimo e o ultimo no lugar da raiz e faz o reheapDown para ordenar
+
         holdData = list[0];
         list[0] = list[sorted];
         list[sorted ]= holdData;
@@ -107,7 +110,7 @@ int main(void){
         printf("[%d]" ,vet[i]);
     }
 
-    printf("\n HeapSort_______________________________\n\n");
+    printf("\n_______________HEAPSORT________________\n\n");
     HeapSort(vet, n-1);
 
     for(i=0;i<n;i++){

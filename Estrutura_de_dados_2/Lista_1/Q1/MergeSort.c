@@ -15,7 +15,7 @@ void merge(int *V, int begin, int mid, int end) {
     tamanho = end - begin + 1;
     p1 = begin;
     p2 = mid + 1;
-    temp  = (int *) malloc(tamanho*sizeof(int));
+    temp  = (int *) malloc(tamanho*sizeof(int)); // vetor temporario
     if(temp != NULL) {
         for(i=0; i<tamanho; i++){
             if(!fim1 && !fim2) {
@@ -41,6 +41,7 @@ void merge(int *V, int begin, int mid, int end) {
 
 }
 void mergeSort(int *V, int begin , int fim){
+// dividir para conquistar, o vetor e dividio ate o caso base onde ele é reconstruido sendo ordenado.
 
     int meio;
     if(begin < fim) {
@@ -73,7 +74,7 @@ int main(void){
         printf("[%d]" ,vet[i]);
     }
 
-    printf("\n MergeSort_______________________________\n");
+    printf("\n______________MERGESORT_________________\n");
     mergeSort(vet,0,n-1);
 
     for(i=0;i<n;i++){

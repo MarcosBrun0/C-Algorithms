@@ -129,29 +129,29 @@ Estrutura_de_dados_2/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Estrutura_de_dados_2.dir/build.make CMakeFiles/Estrutura_de_dados_2.dir/build
 .PHONY : Estrutura_de_dados_2/fast
 
-Lista_1/Q4/main.o: Lista_1/Q4/main.c.o
-.PHONY : Lista_1/Q4/main.o
+Lista_1/Q3/RadixSort.o: Lista_1/Q3/RadixSort.c.o
+.PHONY : Lista_1/Q3/RadixSort.o
 
 # target to build an object file
-Lista_1/Q4/main.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Estrutura_de_dados_2.dir/build.make CMakeFiles/Estrutura_de_dados_2.dir/Lista_1/Q4/main.c.o
-.PHONY : Lista_1/Q4/main.c.o
+Lista_1/Q3/RadixSort.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Estrutura_de_dados_2.dir/build.make CMakeFiles/Estrutura_de_dados_2.dir/Lista_1/Q3/RadixSort.c.o
+.PHONY : Lista_1/Q3/RadixSort.c.o
 
-Lista_1/Q4/main.i: Lista_1/Q4/main.c.i
-.PHONY : Lista_1/Q4/main.i
+Lista_1/Q3/RadixSort.i: Lista_1/Q3/RadixSort.c.i
+.PHONY : Lista_1/Q3/RadixSort.i
 
 # target to preprocess a source file
-Lista_1/Q4/main.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Estrutura_de_dados_2.dir/build.make CMakeFiles/Estrutura_de_dados_2.dir/Lista_1/Q4/main.c.i
-.PHONY : Lista_1/Q4/main.c.i
+Lista_1/Q3/RadixSort.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Estrutura_de_dados_2.dir/build.make CMakeFiles/Estrutura_de_dados_2.dir/Lista_1/Q3/RadixSort.c.i
+.PHONY : Lista_1/Q3/RadixSort.c.i
 
-Lista_1/Q4/main.s: Lista_1/Q4/main.c.s
-.PHONY : Lista_1/Q4/main.s
+Lista_1/Q3/RadixSort.s: Lista_1/Q3/RadixSort.c.s
+.PHONY : Lista_1/Q3/RadixSort.s
 
 # target to generate assembly for a file
-Lista_1/Q4/main.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Estrutura_de_dados_2.dir/build.make CMakeFiles/Estrutura_de_dados_2.dir/Lista_1/Q4/main.c.s
-.PHONY : Lista_1/Q4/main.c.s
+Lista_1/Q3/RadixSort.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Estrutura_de_dados_2.dir/build.make CMakeFiles/Estrutura_de_dados_2.dir/Lista_1/Q3/RadixSort.c.s
+.PHONY : Lista_1/Q3/RadixSort.c.s
 
 # Help Target
 help:
@@ -162,9 +162,9 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... Estrutura_de_dados_2"
-	@echo "... Lista_1/Q4/main.o"
-	@echo "... Lista_1/Q4/main.i"
-	@echo "... Lista_1/Q4/main.s"
+	@echo "... Lista_1/Q3/RadixSort.o"
+	@echo "... Lista_1/Q3/RadixSort.i"
+	@echo "... Lista_1/Q3/RadixSort.s"
 .PHONY : help
 
 
