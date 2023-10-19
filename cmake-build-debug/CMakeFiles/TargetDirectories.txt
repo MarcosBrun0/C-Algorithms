@@ -1,3 +1,0 @@
-/Users/marcosbrunop.campos/Documents/Codes/Computer Science UENF/cmake-build-debug/CMakeFiles/Computer_Science_UENF.dir
-/Users/marcosbrunop.campos/Documents/Codes/Computer Science UENF/cmake-build-debug/CMakeFiles/edit_cache.dir
-/Users/marcosbrunop.campos/Documents/Codes/Computer Science UENF/cmake-build-debug/CMakeFiles/rebuild_cache.dir
