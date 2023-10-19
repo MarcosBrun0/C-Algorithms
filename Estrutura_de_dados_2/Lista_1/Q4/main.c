@@ -33,7 +33,7 @@ void salvaArquivo(char *nome, int *V, int tam, int mudaLinhaFinal){
     fclose(f);
 }
 
-void criArquivoTeste(char *nome){
+void criArquivo(char *nome){ // Cria a pasta dados.txt com numeros inteiros aleatorios
     int i;
     FILE *f = fopen(nome,"w");
     srand(time(NULL));
@@ -43,7 +43,7 @@ void criArquivoTeste(char *nome){
     fclose(f);
 }
 
-int criaArquivosOrdenados(char *nome){
+int criaArquivosOrdenados(char *nome){// separa os numeros na quantidade N e os organiza, depois separando em arquivos Temp1.txt, Temp2.txt,...
     int V[N];
     char novo[20];
     int cont = 0, total = 0;
@@ -70,7 +70,7 @@ int criaArquivosOrdenados(char *nome){
     return cont;
 }
 
-void preencheBuffer(struct arquivo* arq, int T){
+void preencheBuffer(struct arquivo* arq, int T){//le os numeros do arquivo afim de preecher o buffer
     int i;
     if(arq->f == NULL)
         return;
@@ -92,11 +92,11 @@ void preencheBuffer(struct arquivo* arq, int T){
 int procuraMenor(struct arquivo* arq,int K,int T,int* menor){
     int i, idx = -1;
     for(i=0; i<K; i++){
-        if(arq[i].pos < arq[i].MAX){
+        if(arq[i].pos < arq[i].MAX){//ponto de largada
             if(idx == -1)
                 idx = i;
             else{
-                if(arq[i].buffer[arq[i].pos] < arq[idx].buffer[arq[idx].pos])
+                if(arq[i].buffer[arq[i].pos] < arq[idx].buffer[arq[idx].pos])// vai verificar qual buffer de qual arquivo e maior
                     idx = i;
             }
         }
@@ -104,7 +104,7 @@ int procuraMenor(struct arquivo* arq,int K,int T,int* menor){
     if(idx != -1){
         *menor = arq[idx].buffer[arq[idx].pos];
         arq[idx].pos++;
-        if(arq[idx].pos == arq[idx].MAX)
+        if(arq[idx].pos == arq[idx].MAX)//verificar se chegou no MAX, entao preeche o buffer
             preencheBuffer(&arq[idx],T);
         return 1;
     }else
@@ -143,7 +143,7 @@ void merge(char *nome, int K, int T){
         salvaArquivo(nome, buffer, qtdBuffer,1);
 
     for(i=0; i<K; i++)
-        free(arq[i].buffer);
+        free(arq[i].buffer);//free nos ponteiros
     free(arq);
     free(buffer);
 
@@ -185,7 +185,7 @@ void verificaArquivoOrdenado(char *nome){
         printf("Arquivo corretamente ordenado!\n");
 }
 int main(){
-    criArquivoTeste("dados.txt");
+    criArquivo("dados.txt");
     system("pause");
     mergeSortExterno("dados.txt");
     verificaArquivoOrdenado("dados.txt");
