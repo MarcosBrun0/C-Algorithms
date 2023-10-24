@@ -1,7 +1,4 @@
 /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" -S "/Users/marcosbrunop.campos/Documents/Codes/Computer Science UENF/Estrutura_de_dados_2" -B "/Users/marcosbrunop.campos/Documents/Codes/Computer Science UENF/Estrutura_de_dados_2/cmake-build-debug"
--- Configuring done (0.3s)
-CMake Error at CMakeLists.txt:6 (add_executable):
-  No SOURCES given to target: Estrutura_de_dados_2
-
-
-CMake Generate step failed.  Build files cannot be regenerated correctly.
+-- Configuring done (0.2s)
+-- Generating done (0.1s)
+-- Build files have been written to: /Users/marcosbrunop.campos/Documents/Codes/Computer Science UENF/Estrutura_de_dados_2/cmake-build-debug

@@ -1,29 +1,25 @@
-//
-// Created by Marcos Bruno P. Campos on 01/09/23.
-//
-
+// Inclusão de bibliotecas necessárias
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
 
-void medianLeft (int sortData[], int left, int right){
-
+// Função para encontrar a mediana dos três elementos (esquerda, meio e direita)
+void medianLeft(int sortData[], int left, int right) {
     int mid;
     int hold;
 
-    mid = (left = right) / 2;
-    if (sortData[left] > sortData[mid]){
+    mid = (left + right) / 2;
+    if (sortData[left] > sortData[mid]) {
         hold = sortData[left];
         sortData[left] = sortData[mid];
         sortData[mid] = hold;
     }
-    if (sortData[left] > sortData[right]){
-
+    if (sortData[left] > sortData[right]) {
         hold = sortData[left];
         sortData[left] = sortData[mid];
         sortData[right] = hold;
     }
-    if(sortData[mid] > sortData[right]){
+    if (sortData[mid] > sortData[right]) {
         hold = sortData[mid];
         sortData[mid] = sortData[right];
         sortData[right] = hold;
@@ -33,109 +29,105 @@ void medianLeft (int sortData[], int left, int right){
     sortData[mid] = hold;
 
     return;
-
 }
 
-void quickSort (int SortData[], int left, int right ){
-
+// Função principal de ordenação - QuickSort
+void quickSort(int SortData[], int left, int right) {
 #define MIN_SIZE 16
 
     int sortLeft;
     int sortRight;
     int pivot;
     int hold;
-    if ((right - left) > MIN_SIZE){
 
-        medianLeft (SortData, left, right);
+    // Se o tamanho do vetor for maior que MIN_SIZE, usa QuickSort, senão usa Insertion Sort
+    if ((right - left) > MIN_SIZE) {
+        medianLeft(SortData, left, right);
         pivot = SortData[left];
         sortLeft = left + 1;
         sortRight = right;
-        while (sortLeft <= sortRight){
 
+        // Particionamento do vetor
+        while (sortLeft <= sortRight) {
             while (SortData[sortLeft] < pivot)
-                {sortLeft = sortLeft + 1;}
+            {sortLeft = sortLeft + 1;}
             while (SortData[sortRight] >= pivot)
-                {sortRight = sortRight - 1;}
-                if (sortLeft <= sortRight){
+            {sortRight = sortRight - 1;}
 
-                    hold = SortData[sortLeft];
-                    SortData[sortLeft] = SortData[sortRight];
-                    SortData[sortRight] = hold;
-                    sortLeft = sortLeft + 1;
-                    sortRight = sortRight - 1;
-
-                }
+            // Troca elementos
+            if (sortLeft <= sortRight) {
+                hold = SortData[sortLeft];
+                SortData[sortLeft] = SortData[sortRight];
+                SortData[sortRight] = hold;
+                sortLeft = sortLeft + 1;
+                sortRight = sortRight - 1;
+            }
         }
+
+        // Reorganiza recursivamente as partições
         SortData[left] = SortData[sortLeft - 1];
         SortData[sortLeft - 1] = pivot;
-        if(left < sortRight)
-            quickSort(SortData, left, sortRight - 1);
-        if(sortLeft < right)
-            quickSort (SortData, sortLeft, right);
-    }
-    else
-        quickInsertion(SortData, left, right);
-    return;
 
+        if (left < sortRight)
+            quickSort(SortData, left, sortRight - 1);
+        if (sortLeft < right)
+            quickSort(SortData, sortLeft, right);
+    } else {
+        // Se o tamanho for menor que MIN_SIZE, usa Insertion Sort
+        quickInsertion(SortData, left, right);
+    }
+    return;
 }
 
-void quickInsertion (int data[], int first, int last){
-
+// Função de ordenação por inserção
+void quickInsertion(int data[], int first, int last) {
     int hold;
     int walker;
-    for (int current = first + 1;
-        current <= last;
-        current++){
-
+    for (int current = first + 1; current <= last; current++) {
         hold = data[current];
         walker = current - 1;
-        while (walker >= first && hold < data[walker]){
+
+        // Move elementos maiores que o "hold" para a direita
+        while (walker >= first && hold < data[walker]) {
             data[walker + 1] = data[walker];
             walker = walker - 1;
         }
+
+        // Coloca "hold" na posição correta
         data[walker + 1] = hold;
     }
     return;
 }
 
-int main(){
+int main() {
     int n, i;
     int *vet;
     srand(time(NULL));
 
-
-
-    if(vet == NULL){
-        printf("ERRO");
-        exit(1);
-    }
-
-
+    // Obtém o tamanho do vetor do usuário
     printf("Digite o valor de N: ");
-    scanf("%d",&n);
+    scanf("%d", &n);
 
-    vet = (int*)malloc(sizeof(int) * n);
+    // Aloca memória para o vetor
+    vet = (int *)malloc(sizeof(int) * n);
 
-    for(i=0;i<n; i++){
-        vet[i] = rand()%100;
+    // Preenche o vetor com números aleatórios e imprime o vetor original
+    for (i = 0; i < n; i++) {
+        vet[i] = rand() % 100;
         printf("[%d] ", vet[i]);
     }
-    printf("\n ", vet[i]);
+    printf("\n");
 
-    quickSort(vet,0, n-1);
+    // Ordena o vetor usando o QuickSort
+    quickSort(vet, 0, n - 1);
 
-    for(i=0;i<30; i++){
-
-        printf(" - ");
-    }
-    printf("QUICKSORT");
-    printf("\n ", vet[i]);
-    for(i=0;i<n; i++){
-
+    // Imprime o vetor ordenado
+    for (i = 0; i < n; i++) {
         printf("[%d] ", vet[i]);
     }
+
+    // Libera a memória alocada para o vetor
+    free(vet);
 
     return 0;
 }
-
-
