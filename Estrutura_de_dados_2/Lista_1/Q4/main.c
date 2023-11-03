@@ -109,7 +109,6 @@ int procuraMenor(struct arquivo* arq,int K,int T,int* menor){
         return 1;
     }else
         return 0;
-
 }
 
 void merge(char *nome, int K, int T){
@@ -146,7 +145,6 @@ void merge(char *nome, int K, int T){
         free(arq[i].buffer);//free nos ponteiros
     free(arq);
     free(buffer);
-
 }
 
 void mergeSortExterno(char *nome){
@@ -164,7 +162,6 @@ void mergeSortExterno(char *nome){
         remove(novo);
     }
     printf("Fim!\n");
-
 }
 
 void verificaArquivoOrdenado(char *nome){
@@ -186,9 +183,9 @@ void verificaArquivoOrdenado(char *nome){
 }
 int main(){
     criArquivo("dados.txt");
-    system("pause");
+
     mergeSortExterno("dados.txt");
     verificaArquivoOrdenado("dados.txt");
-    system("pause");
+
     return 0;
 }
