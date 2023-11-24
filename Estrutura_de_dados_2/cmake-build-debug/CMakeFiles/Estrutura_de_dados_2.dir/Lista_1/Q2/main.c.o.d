@@ -1,5 +1,5 @@
-CMakeFiles/Estrutura_de_dados_2.dir/Lista_1/Q4/main.c.o: \
-  /Users/MBhome/Documents/Codes/Computer\ Science\ UENF/Estrutura_de_dados_2/Lista_1/Q4/main.c \
+CMakeFiles/Estrutura_de_dados_2.dir/Lista_1/Q2/main.c.o: \
+  /Users/MBhome/Documents/Codes/Computer\ Science\ UENF/Estrutura_de_dados_2/Lista_1/Q2/main.c \
   /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk/usr/include/stdio.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk/usr/include/_stdio.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk/usr/include/sys/cdefs.h \
@@ -72,8 +72,4 @@ CMakeFiles/Estrutura_de_dados_2.dir/Lista_1/Q4/main.c.o: \
   /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk/usr/include/sys/_types/_wchar_t.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk/usr/include/malloc/_malloc.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk/usr/include/sys/_types/_dev_t.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk/usr/include/sys/_types/_mode_t.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk/usr/include/time.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk/usr/include/sys/_types/_clock_t.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk/usr/include/sys/_types/_time_t.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk/usr/include/sys/_types/_timespec.h
+  /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk/usr/include/sys/_types/_mode_t.h

@@ -186,9 +186,9 @@ void verificaArquivoOrdenado(char *nome){
 }
 int main(){
     criArquivo("dados.txt");
-    system("pause");
+    //system("pause");
     mergeSortExterno("dados.txt");
     verificaArquivoOrdenado("dados.txt");
-    system("pause");
+    //system("pause");
     return 0;
 }

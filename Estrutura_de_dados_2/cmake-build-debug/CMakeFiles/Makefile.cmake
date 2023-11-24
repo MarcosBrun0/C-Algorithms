@@ -27,7 +27,7 @@ set(CMAKE_MAKEFILE_DEPENDS
   "/Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.26/Modules/Platform/Darwin.cmake"
   "/Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.26/Modules/Platform/UnixPaths.cmake"
   "/Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.26/Modules/ProcessorCount.cmake"
-  "/Users/marcosbrunop.campos/Documents/Codes/Computer Science UENF/Estrutura_de_dados_2/CMakeLists.txt"
+  "/Users/MBhome/Documents/Codes/Computer Science UENF/Estrutura_de_dados_2/CMakeLists.txt"
   "CMakeFiles/3.26.4/CMakeCCompiler.cmake"
   "CMakeFiles/3.26.4/CMakeSystem.cmake"
   )

@@ -1,5 +1,5 @@
-CMakeFiles/Estrutura_de_dados_2.dir/Lista_1/Q4/main.c.o: \
-  /Users/MBhome/Documents/Codes/Computer\ Science\ UENF/Estrutura_de_dados_2/Lista_1/Q4/main.c \
+CMakeFiles/Estrutura_de_dados_2.dir/Lista_1/Q1/QuickSort.c.o: \
+  /Users/MBhome/Documents/Codes/Computer\ Science\ UENF/Estrutura_de_dados_2/Lista_1/Q1/QuickSort.c \
   /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk/usr/include/stdio.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk/usr/include/_stdio.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk/usr/include/sys/cdefs.h \

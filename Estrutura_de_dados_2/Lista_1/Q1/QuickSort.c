@@ -3,6 +3,30 @@
 #include <stdlib.h>
 #include <time.h>
 
+
+// Função de ordenação por inserção
+void quickInsertion(int data[], int first, int last) {
+    int hold;
+    int walker;
+    for (int current = first + 1; current <= last; current++) {
+        hold = data[current];
+        walker = current - 1;
+
+        // Move elementos maiores que o "hold" para a direita
+        while (walker >= first && hold < data[walker]) {
+            data[walker + 1] = data[walker];
+            walker = walker - 1;
+        }
+
+        // Coloca "hold" na posição correta
+        data[walker + 1] = hold;
+    }
+    return;
+}
+
+
+
+
 // Função para encontrar a mediana dos três elementos (esquerda, meio e direita)
 void medianLeft(int sortData[], int left, int right) {
     int mid;
@@ -75,26 +99,6 @@ void quickSort(int SortData[], int left, int right) {
     } else {
         // Se o tamanho for menor que MIN_SIZE, usa Insertion Sort
         quickInsertion(SortData, left, right);
-    }
-    return;
-}
-
-// Função de ordenação por inserção
-void quickInsertion(int data[], int first, int last) {
-    int hold;
-    int walker;
-    for (int current = first + 1; current <= last; current++) {
-        hold = data[current];
-        walker = current - 1;
-
-        // Move elementos maiores que o "hold" para a direita
-        while (walker >= first && hold < data[walker]) {
-            data[walker + 1] = data[walker];
-            walker = walker - 1;
-        }
-
-        // Coloca "hold" na posição correta
-        data[walker + 1] = hold;
     }
     return;
 }
