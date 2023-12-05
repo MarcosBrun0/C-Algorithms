@@ -1,0 +1,14 @@
+# depslib dependency file v1.0
+1701628167 source:c:\users\enzom\onedrive\documentos\uenf\ed2\testec\q5\avlt.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<ctype.h>
+	"AVLT.h"
+
+1701627629 c:\users\enzom\onedrive\documentos\uenf\ed2\testec\q5\avlt.h
+
+1701627641 source:c:\users\enzom\onedrive\documentos\uenf\ed2\testec\q5\main.c
+	<stdio.h>
+	"AVLT.h"
+
