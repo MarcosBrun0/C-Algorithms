@@ -11,5 +11,5 @@ add_executable(Estrutura_de_dados_2
 
         #Lista_1/Q2/main.c
         Lista_1/Q3/RadixSort.c
-        #Lista_1/Q4/main.c
+        #Lista_1/Q4-Busca-Binaria/main.c
 )
