@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CMakeSettings">
+    <configurations>
+      <configuration PROFILE_NAME="Debug" ENABLED="true" CONFIG_NAME="Debug" />
+    </configurations>
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="aca35b77-45fe-4cad-bfbe-8874f68cc631" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../Q5-Contagem de Palavras/WordCount.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Q5-Contagem de Palavras/WordCount.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Q5-Contagem de Palavras/main.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Estrutura_de_dados/Lista1/Lista1q1/exercicio2.4" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Estrutura_de_dados/Lista1/Lista1q1/exercicio2.4.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Estrutura_de_dados/Lista1/Lista1q1/exercicio2.4.dSYM/Contents/Info.plist" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Estrutura_de_dados/Lista1/Lista1q1/exercicio2.4.dSYM/Contents/Resources/DWARF/exercicio2.4" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Estrutura_de_dados/Lista1/Lista1q1/exercicio2.5" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Estrutura_de_dados/Lista1/Lista1q1/exercicio2.5.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Estrutura_de_dados/Lista1/Lista1q1/exercicio2.5.dSYM/Contents/Info.plist" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Estrutura_de_dados/Lista1/Lista1q1/exercicio2.5.dSYM/Contents/Resources/DWARF/exercicio2.5" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Estrutura_de_dados/Lista1/Lista1q1/exercicio2.7" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Estrutura_de_dados/Lista1/Lista1q1/exercicio2.7.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Estrutura_de_dados/Lista1/Lista1q1/exercicio2.7.dSYM/Contents/Info.plist" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Estrutura_de_dados/Lista1/Lista1q1/exercicio2.7.dSYM/Contents/Resources/DWARF/exercicio2.7" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Estrutura_de_dados/Lista1/Lista1q1/exercicio2.8.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Estrutura_de_dados/Lista1/Lista1q3/Bubllesort" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Estrutura_de_dados/Lista1/Lista1q3/Bubllesort.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Estrutura_de_dados/Lista1/Lista1q3/Bubllesort.dSYM/Contents/Info.plist" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Estrutura_de_dados/Lista1/Lista1q3/Bubllesort.dSYM/Contents/Resources/DWARF/Bubllesort" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Estrutura_de_dados/Lista1/Lista1q3/Inserctionsort" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Estrutura_de_dados/Lista1/Lista1q3/Inserctionsort.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Estrutura_de_dados/Lista1/Lista1q3/Selectionsort" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Estrutura_de_dados/Lista1/Lista1q3/Selectionsort.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Estrutura_de_dados/Lista1/Lista1q3/TAD-ordenacao/main" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Estrutura_de_dados/Lista1/Lista1q3/TAD-ordenacao/main.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Estrutura_de_dados/Lista1/Lista1q3/TAD-ordenacao/tadord.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Estrutura_de_dados/Lista1/Lista1q3/tadcilindro.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Estrutura_de_dados/Lista1/cilindro.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Estrutura_de_dados/Lista1/cilindro.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Estrutura_de_dados/Lista1/main.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../AVL-Tree" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Lista_1/Q1/HeapSort.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Lista_1/Q1/MergeSort.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Lista_1/Q1/QuickSort.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Lista_1/Q1/output/HeapSort" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Lista_1/Q1/output/MergeSort" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Lista_1/Q1/output/QuickSort" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Lista_1/Q2/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Lista_1/Q2/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Lista_1/Q2/main" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Lista_1/Q2/main.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Lista_1/Q2/output/main" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Lista_1/Q3/RadixSort.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Lista_1/Q3/output/RadixSort" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Lista_1/Q4/output/main" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Lista_2.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ABB" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AVL" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AVL-Tree" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BinaryTree" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Q1-Arvores Binarias e AVL/AVL-Tree" beforeDir="false" afterPath="$PROJECT_DIR$/../Q1-Arvores Binarias e AVL/AVL-Tree" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Q1-Arvores Binarias e AVL/AVL-Tree.c" beforeDir="false" afterPath="$PROJECT_DIR$/../Q1-Arvores Binarias e AVL/AVL-Tree.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Q5/AVLT.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Q5/AVLT.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Q5/Q5.cbp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Q5/Q5.depend" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Q5/Q5.layout" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Q5/bin/Debug/Q5.exe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Q5/main.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Q5/obj/Debug/AVLT.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Q5/obj/Debug/main.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Q5/teste.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WordCount" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cmake-build-debug/.cmake/api/v1/reply/cache-v2-7fca50bb79fd86a6a9fe.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cmake-build-debug/.cmake/api/v1/reply/cmakeFiles-v1-cc1af0843b62982a47c8.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cmake-build-debug/.cmake/api/v1/reply/codemodel-v2-886e6802e58a8b444cd9.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cmake-build-debug/.cmake/api/v1/reply/index-2023-11-27T21-37-15-0072.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cmake-build-debug/.cmake/api/v1/reply/target-Lista_2-Debug-acd030de13cdfe49d421.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cmake-build-debug/.cmake/api/v1/reply/toolchains-v1-5896f1444c2b2e9a8321.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cmake-build-debug/.ninja_deps" beforeDir="false" afterPath="$PROJECT_DIR$/../cmake-build-debug/.ninja_deps" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cmake-build-debug/.ninja_log" beforeDir="false" afterPath="$PROJECT_DIR$/../cmake-build-debug/.ninja_log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cmake-build-debug/CMakeCache.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../cmake-build-debug/CMakeCache.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cmake-build-debug/CMakeFiles/CMakeConfigureLog.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/../cmake-build-debug/CMakeFiles/CMakeConfigureLog.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cmake-build-debug/CMakeFiles/TargetDirectories.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../cmake-build-debug/CMakeFiles/TargetDirectories.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cmake-build-debug/CMakeFiles/rules.ninja" beforeDir="false" afterPath="$PROJECT_DIR$/../cmake-build-debug/CMakeFiles/rules.ninja" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cmake-build-debug/build.ninja" beforeDir="false" afterPath="$PROJECT_DIR$/../cmake-build-debug/build.ninja" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../main" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ClangdSettings">
+    <option name="formatViaClangd" value="false" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../.." />
+  </component>
+  <component name="ProjectApplicationVersion">
+    <option name="ide" value="CLion" />
+    <option name="majorVersion" value="2023" />
+    <option name="minorVersion" value="2.1" />
+  </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 0
+}]]></component>
+  <component name="ProjectId" id="2dHuI69DwfqFNRizPBy4DzOWD4J" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.cidr.known.project.marker": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "cf.first.check.clang-format": "false",
+    "cidr.known.project.marker": "true",
+    "git-widget-placeholder": "main",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="aca35b77-45fe-4cad-bfbe-8874f68cc631" name="Changes" comment="" />
+      <created>1709677242031</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1709677242031</updated>
+      <workItem from="1709677243843" duration="27000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>

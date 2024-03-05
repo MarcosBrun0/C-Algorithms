@@ -4,7 +4,7 @@
 int main() {
     FILE *file = fopen("teste.txt", "r");
     if (file == NULL) {
-        printf("Não foi possível abrir o arquivo.\n");
+        printf("Nao foi possivel abrir o arquivo.\n");
         return 1;
     }
 

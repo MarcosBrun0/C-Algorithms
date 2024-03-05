@@ -11,7 +11,7 @@
 #include <stdlib.h>
 #include <time.h>
 
-int TAMANHO = 10000;
+int LENGHT = 10000;
 // Definição de um nó da árvore AVL
 struct Node {
     int key;
@@ -45,11 +45,11 @@ struct Node* newNode(int key) {
 // Função para rotacionar uma subárvore para a direita (rotação simples)
 struct Node* rotateRight(struct Node* y) {
     struct Node* x = y->left;
-    struct Node* T2 = x->right;
+    struct Node* z = x->right;
 
     // Realiza a rotação
     x->right = y;
-    y->left = T2;
+    y->left = z;
 
     // Atualiza alturas
     y->height = 1 + (getHeight(y->left) > getHeight(y->right) ? getHeight(y->left) : getHeight(y->right));
@@ -62,11 +62,11 @@ struct Node* rotateRight(struct Node* y) {
 // Função para rotacionar uma subárvore para a esquerda (rotação simples)
 struct Node* rotateLeft(struct Node* x) {
     struct Node* y = x->right;
-    struct Node* T2 = y->left;
+    struct Node* z = y->left;
 
     // Realiza a rotação
     y->left = x;
-    x->right = T2;
+    x->right = z;
 
     // Atualiza alturas
     x->height = 1 + (getHeight(x->left) > getHeight(x->right) ? getHeight(x->left) : getHeight(x->right));
@@ -81,7 +81,7 @@ struct Node* insert(struct Node* root, int key) {
     // Passo 1: Realiza a inserção normal de uma árvore binária de busca
     if (root == NULL)
         return newNode(key);
-
+// decisão menor ou maior
     if (key < root->key)
         root->left = insert(root->left, key);
     else if (key > root->key)
@@ -147,7 +147,7 @@ int main() {
     struct Node* root = NULL;
 
     // Preenche a árvore AVL com números aleatórios
-    for (int i = 0; i < TAMANHO; i++) {
+    for (int i = 0; i < LENGHT; i++) {
         int randomKey = rand() % 10000;
         root = insert(root, randomKey);
     }
