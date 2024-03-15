@@ -1,1 +1,0 @@
-/*	=============== AVL_Count ==============	Returns number of nodes in tree.	   Pre     Tree has been created 	   Returns tree count */int AVL_Count (AVL_TREE* tree){//	Statements 	return (tree->count);}	// AVL_Count 
