@@ -1,5 +1,6 @@
 # Introduction
-This repository aims to provide clear and concise implementations of fundamental data structures and algorithms in C. Each data structure and algorithm is implemented with comments to explain the code and its functionality.
+This repository aims to provide implementations of fundamental data structures and algorithms in C.
+
 
 # Data Structures
 ## Arrays
